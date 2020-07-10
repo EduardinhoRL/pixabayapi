@@ -38,8 +38,6 @@ const Cabecera = styled.header`
             font-size: 25px
         }
     }
-
-    
 `
 
 const Form = styled.form` 
@@ -68,7 +66,7 @@ const Inputs = styled.input`
     font-family: 'Montserrat', sans-serif;
 `
 
-const Header = ({setBusqueda}) => {
+const Header = ({setBusqueda, setPaginaactual}) => {
 
     const [termino, setTermino] = useState('')
     const [error, setError] = useState(false)
@@ -76,8 +74,9 @@ const Header = ({setBusqueda}) => {
     const buscarImagen = e => {
         e.preventDefault()
 
-        // validar
+        setPaginaactual(1)
 
+        // validar 
         if(termino.trim() === ''){
             setError(true)
             return

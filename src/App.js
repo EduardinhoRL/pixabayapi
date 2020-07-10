@@ -17,7 +17,7 @@ function App() {
   const [busqueda, setBusqueda] = useState('')
   const [imagenes, setImagenes] = useState([])
   const [paginaactual, setPaginaactual] = useState(1)
-  const [totalpaginas, setTotalpaginas] = useState(5)
+  const [totalpaginas, setTotalpaginas] = useState(1)
   const [error, setError] = useState(false)
 
   useEffect(() => {
@@ -56,10 +56,11 @@ function App() {
     <>
       <Header 
         setBusqueda={setBusqueda}
+        setPaginaactual={setPaginaactual}
       />
 
       <ListadoImagenes 
-        imagenes={imagenes}
+        imagenes={imagenes} 
       /> 
 
       <CenterError>
