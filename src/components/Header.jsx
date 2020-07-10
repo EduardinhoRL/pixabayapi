@@ -54,8 +54,9 @@ const Form = styled.form`
         width: 70%; 
     }
     
-    @media (max-width: 650px) {
+    @media (max-width: 650px) { 
         width: 85%; 
+        grid-template-columns: 1fr;
     } 
 `
 
